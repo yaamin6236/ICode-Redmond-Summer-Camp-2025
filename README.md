@@ -37,11 +37,6 @@ Some projects contain large files (like videos, animations, or game files) that 
 2. Click on the file name
 3. Click the **"Download"** button
 
-### Download Everything:
-1. Click the green **"Code"** button at the top
-2. Select **"Download ZIP"**
-3. Extract the ZIP file on your computer
-
 ### View Projects Online:
 - Most code files can be viewed directly in your browser
 - Images and documents display automatically
