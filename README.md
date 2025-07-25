@@ -59,8 +59,8 @@ Some projects contain large files (like videos, animations, or game files) that 
 If you have trouble accessing any files or need help downloading projects, please contact:
 
 **ICode Redmond Staff**
-- Email: [contact-email]
-- Phone: [contact-phone]
+- Email: [redmond@icodeschool.com]
+- Phone: [(425) 405-4550]
 
 ---
 
