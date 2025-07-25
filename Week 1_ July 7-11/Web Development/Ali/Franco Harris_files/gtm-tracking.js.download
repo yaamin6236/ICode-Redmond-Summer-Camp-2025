@@ -1,0 +1,83 @@
+﻿function trackViewItem(product) {
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "view_item",
+        ecommerce: {
+            currency: "USD",
+            value: product.formatedPrice,
+            items: [{
+                item_id: product.skuNumber,
+                item_name: product.name,
+                discount: parseFloat(product.priceDetail.listPrice - product.priceDetail.price),
+                price: product.formattedListingPrice,
+                quantity: 1
+            }]
+        }
+    });
+}
+
+function trackPurchase(cart, promo) {
+    var itemsList = buildItemsList(cart.cartItems);
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "purchase",
+        ecommerce: {
+            currency: "USD",
+            value: cart.grandTotal,
+            tax: cart.totalTax,
+            shipping: cart.totalShipping,
+            coupon: promo,
+            items: itemsList
+        }
+    });
+}
+
+function trackBeginCheckout(cart, promo) {
+    var itemsList = buildItemsList(cart.cartItems);
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "begin_checkout",
+        ecommerce: {
+            currency: "USD",
+            value: cart.grandTotal,
+            tax: cart.totalTax,
+            shipping: cart.totalShipping,
+            coupon: promo,
+            items: itemsList
+        }
+    });
+}
+
+function trackAddToCart(product, quantity) {
+    dataLayer.push({ ecommerce: null });
+    dataLayer.push({
+        event: "add_to_cart",
+        ecommerce: {
+            currency: "USD",
+            value: product.formatedPrice,
+            items: [{
+                item_id: product.skuNumber,
+                item_name: product.name,
+                discount: parseFloat(product.priceDetail.listPrice - product.priceDetail.price),
+                price: product.formattedListingPrice,
+                quantity: quantity
+            }]
+        }
+    });
+}
+
+function buildItemsList(items) {
+    var newItems = [];
+    items.forEach(function(product) {
+        var item = {
+            item_id: product.skuNumber,
+            item_name: product.skuName,
+            price: product.totalPrice,
+            quantity: product.cartItemUnits
+        };
+
+        newItems.push(item);
+    });
+
+    return newItems;
+}

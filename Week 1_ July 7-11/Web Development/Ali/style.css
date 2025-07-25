@@ -1,0 +1,36 @@
+body 
+{
+    background: lightyellow;
+    font: 18px Arial, sans-serif;
+}
+
+h1
+{
+    color: orange;
+    text-align: center;
+}
+
+section
+{
+    color: black;
+    text-align: center;
+}
+
+#firstheading
+{
+    color: greenyellow
+}
+
+#subheading
+{
+    color:aquamarine
+}
+
+.greenbackground
+{
+    background-color: green;
+    border: 10px solid blue;
+    border-style: ridge;
+    padding: 15px;
+    border-color: rgb(40, 187, 40) blue rgb(127, 5, 5);
+}

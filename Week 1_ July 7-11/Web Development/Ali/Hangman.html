@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var words = [
+            "Lion",
+            "Cat",
+            "Simba",
+            "pneumonoultramicroscopicsilicovolcanoconiosis"
+        ];
+
+        var word = words[Math.floor(Math.random() * words.length)];
+
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+
+        var remainingLetters = world.length;
+
+        while (remainingLetters > 0) {
+            alert(answerArray.join(" "));
+
+            var guess = prompt("Guess a letter, or click Cancel to stop playing.");
+            if (guess === null) {
+                break;
+            } else if (guess.length !== 1) {
+                alert("Please enter a single letter.");
+            } else {
+                guess = guess.toLowerCase();
+
+                for (var j = 0; j < world.length; j++) {
+                    if (word[j] === guess) {
+                        answerArray[j] = guess;
+                        remainingLetters--;
+                    }
+                }
+            }
+        }
+
+        alert(answerArray.join(" "));
+        alert("Good job! The answer was " + word);
+    </script>
+</body>
+
+</html>

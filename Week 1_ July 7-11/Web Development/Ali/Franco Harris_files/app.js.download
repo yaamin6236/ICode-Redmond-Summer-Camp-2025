@@ -1,0 +1,43 @@
+﻿import vueCheckoutForm from './components/checkout/checkout-form.js'
+import vueProductDetails from './components/product/product-details.js'
+import vuePhotoContest from './components/photo/photo-contest.js'
+import * as Directives from './directives.js'
+import * as Filters from './filters.js'
+
+
+new Vue({
+    components: {
+        vuePhotoContest
+    },
+    el: '#photo-contest-vue-app',
+})
+
+new Vue({
+    directives: {
+        Directives
+    },
+    data: {
+        config: {}
+    },
+    components: {
+        vueProductDetails
+    },
+    el: '#product-details-vue-app',
+})
+
+
+new Vue({
+    directives: {
+        Directives
+    },
+    filters: {
+        Filters
+    },
+    components: {
+        vueCheckoutForm
+    },
+    data: {
+        config: {}
+    },
+    el: '#checkout-form-vue-app',
+})

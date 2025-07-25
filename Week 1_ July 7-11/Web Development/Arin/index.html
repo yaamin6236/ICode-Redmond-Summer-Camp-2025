@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Roblox</title>
+    <link rel="icon" type="image/x-icon" href="/roblox favicon.png">
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <img src="rblx.png" alt="RobloxLogo">
+    <h1>Roblox</h1>
+    <section id="p1">
+        <h2>Part 1: What is Roblox?</h2>
+        <p>Roblox is an online platform that allows users to create games, or "experiences" for others to play. These
+            immersive 3D experiences are created through Roblox's proprietary game engine, called Roblox Studio. It has
+            an online currency called Robux which is used for in-game purchases.</p>
+    </section>
+    <section id="p2">
+        <h2>Part 2: How it works</h2>
+        <p>When you choose a game to play on your device (client), it connects to Roblox (server) and tells it the ID of
+            the game that you requested. The server replies with the experience data, and the place loads on the client.
+        </p>
+    </section>
+    <section id="p3">
+        <h2>Part 3: History of Roblox</h2>
+        <p>Roblox was created by David Baszucki alongside Erik Cassel in 2004 and publicly released in 2006. It was
+            originally called "DynaBlocks" because of the default Stud and Inlet building block's resemblance to LEGO
+            Bricks.</p>
+    </section>
+    <section id="p4">
+        <h2>Part 4: Roblox Studio</h2>
+        <p>As mentioned in part 1, Roblox Studio is Roblox's proprietary experience creation engine. You can build maps,
+            and script it to your liking in Lua. Studio also supports user created Plugins that help you level up the
+            funtionality and effiency of creating experiences.</p>
+        <img src="rblx-studio.png" alt="Roblox Studio Logo">
+    </section>
+    <a href="/song.html">Listen to the best song in the world</a> <br />
+    <a href="/to-do.html">To-Do List</a> <br />
+    <a href="/alert.html">Make an alert</a> <br />
+    <a href="/hangman.html">Hangman</a>
+    <!-- Overlay and Popup -->
+    <div id="overlay" style="
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.5);
+  z-index:999;
+"></div>
+
+    <div id="popup" style="
+  display:none;
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background:white;
+  padding:20px;
+  border:2px solid #333;
+  z-index:1000;
+  text-align:center;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+">
+        <p id="popupText" style="margin-bottom: 15px;">Go to TestSite?</p>
+        <button id="yesBtn" style="margin: 5px; padding: 8px 16px;">Yes</button>
+        <button id="noBtn" style="margin: 5px; padding: 8px 16px;">No</button>
+    </div>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'T' || e.key === 't') {
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+            }
+        });
+
+        document.getElementById('yesBtn').addEventListener('click', function () {
+            window.location.href = '/testsite.html';
+        });
+
+        document.getElementById('noBtn').addEventListener('click', function () {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+
+    <script>
+        var myTopThreeAnimals = ["Cats", "Dogs", "Guinea Pigs"]
+
+        for (var position = 0; position < myTopThreeAnimals.length; position++) {
+            var animal = myTopThreeAnimals[position];
+            console.log(animal);
+        }
+
+        var cat = {
+            "age": 5,
+            "name": "Rosie",
+            "color": "Grey and White"
+        }
+
+        console.log(cat["age"])
+        console.log(cat["name"])
+        console.log(cat["color"])
+    </script>
+</body>
+
+</html>

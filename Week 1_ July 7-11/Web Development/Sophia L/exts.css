@@ -1,0 +1,11 @@
+body {
+    height: 200vh;
+    background: linear-gradient(to right,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet);
+}

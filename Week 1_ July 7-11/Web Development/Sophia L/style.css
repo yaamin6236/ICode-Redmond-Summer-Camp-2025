@@ -1,0 +1,13 @@
+body {
+    background: rgb(255, 255, 255);
+    font: 18px bolder , sans-serif;
+}
+h1 {
+    color:black;
+}
+
+.highlight {
+    background: rgb(235, 72, 72);
+    border-top: 10px solid rgb(58, 58, 58);
+}
+

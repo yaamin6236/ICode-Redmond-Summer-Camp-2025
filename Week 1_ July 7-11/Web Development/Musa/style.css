@@ -1,0 +1,21 @@
+body  {
+    background: black;
+    font: 18px Arial, sans-serif;
+}
+h1 {
+    color: black;
+}
+/*you are crazy the most annoying person in teh world.*/
+h1 , p , h2 {
+    text-align: center;
+    color : black;
+}
+#bold {
+    color: Red;
+}
+.blue {
+    color: white;
+    border-style: solid; 
+    border-color: red;
+}
+

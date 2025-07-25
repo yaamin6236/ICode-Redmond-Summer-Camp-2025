@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        var words = [
+            "coding",
+            "artifical Intellegance",
+            "robotics",
+            "icode",
+            "website",
+            "hangman",
+            "visual code studio",
+            "game",
+            "world wide web",
+            "console",
+            "eingeneer"
+        ];
+
+        var word = words[Math.floor(Math.random() * words.length)];
+
+        var answerArray = [];
+        for (var i = 0; i < word.length; i++) {
+            answerArray[i] = "_";
+        }
+
+        var remainingLetters = word.length;
+        var guesses = 3;
+
+        while (guesses != 0 && remainingLetters > 0) {
+
+            alert(answerArray.join(" "));
+
+            var guess = prompt("Guess a letter, or click cancel to stop playing.");
+            if (guess === null) {
+
+                break;
+            } else if (guess.length !== 1) {
+                alert("Please enter a single letter.");
+            } else {
+                var frequency = 0;
+                guess = guess.toLowerCase();
+
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] === guess) {
+                        frequency++;
+                        answerArray[j] = guess;
+                        remainingLetters--;
+                    }
+                }
+
+                if (frequency == 0) {
+                    guesses--;
+                }
+            }
+        }
+
+        if (guesses > 0) {
+            alert(answerArray.join(" "));
+            alert("Good job! The answer was "+ word);
+        } else {
+            alert("Nice try! You lose");
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--is a h1 sized heading-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      /* 
+    for (varvarible_name = 0; variable_name < 10; varible name++){
+    console.log (" hta a")}
+  */
+    </script>
+  </head>
+
+  <body>
+    <h1 style="background-color: blue">Welcome to All about Messi</h1>
+    <p id="demo2" style="color: white"></p>
+
+    <section>
+      <b id="bold">Early life</b>
+      <p class="blue">
+        lionel messi was born on june 24 1987 in argentina. At 17 Messi made his
+        competitve debut for Barcelona in october 2004. He gradually established
+        himself as an integral player for the club, and during his first
+        uninterrupted season at age 22 in 2008–09 he helped Barcelona achieve
+        the first treble in Spanish football. This resulted in Messi winning the
+        first of four consecutive Ballon d'Ors, and by the 2011–12 season he set
+        the European record for most goals in a season and established himself
+        as Barcelona's all-time top scorer.
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank"
+        ><i>lionel Messi wiki!</i></a
+      >
+    </section>
+    <section>
+      <b id="bold">Time with Argentina </b>
+      <p class="blue">
+        At 17, he was two years younger than the other players and, at around
+        half their height, he looked even younger. With his floppy hair and
+        boyish air he did not cut an impressive figure. It was impossible to
+        imagine him as a future superstar -- until he got on the ball and all of
+        us suffered a collective jaw drop. The way the ball was tied to his left
+        foot was enough to make sure that everyone was paying attention. But
+        there was so much more -- his awareness of what was happening around
+        him, the calm of his decision making, the clear impression that none of
+        this talent was wasted, that it was all employed in creating a threat to
+        the opposing goal. It did not take long before our secret was out. A few
+        months later he was the star as Argentina won the Under-20 World Cup.
+      </p>
+      <a
+        href="https://www.espn.com/soccer/story/_/id/37634895/after-two-decades-feels-right-argentina-messi"
+        target="_blank"
+      >
+        lionel Messi ESPN!</a
+      >
+      <img src="flag.png" />
+    </section>
+    <section>
+      <b id="bold">Later life </b>
+      <p class="blue">
+        Messi, now playing for Inter Miami CF of the MLS, helped his home
+        country win soccer’s biggest event for the first time since 1986,
+        scoring two goals in the final and leading Argentina to a 4-2 win over
+        Kylian Mbappé and France on penalties. Argentina’s captain was also
+        named the tournament MVP. The new series follows up Messi Meets America,
+        Apple’s 2023 look at the star striker’s arrival and first season in the
+        MLS. Inter Miami begins the 2024 regular season also on February 21 with
+        a match against Real Salt Lake.
+      </p>
+      <img src="Inter_Miami.png" />
+      <a href="https://www.biography.com/athletes/lionel-messi" target="_blank">
+        lionel Messi biography</a
+      >
+    </section>
+
+    <section>
+      <b id="bold"> World Cup</b>
+      <p class="blue">
+        Lionel Messi won the 2022 FIFA World Cup with Argentina, defeating
+        France in the final. The match went to penalties after a 3-3 draw, with
+        Argentina winning 4-2 in the shootout. This victory marked Argentina's
+        first World Cup win since 1986 and Messi's first World Cup title.
+      </p>
+      <a
+        href="https://www.google.com/search?q=world+cup+messi+won&sca_esv=8fe472cf0c0bad30&ei=yipsaLHhPIfL0PEPuLne4Q4&oq=world+cup+messi+&gs_lp=Egxnd3Mtd2l6LXNlcnAiEHdvcmxkIGN1cCBtZXNzaSAqAggBMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEj8FlA_WD9wAXgBkAEAmAFooAFoqgEDMC4xuAEByAEA-AEBmAICoAJvwgIKEAAYRxjWBBiwA8ICDRAuGIAEGIoFGEMYsAPCAg0QABiABBiKBRhDGLADmAMAiAYBkAYMkgcDMS4xoAf6BLIHAzAuMbgHasIHBTAuMS4xyAcF&sclient=gws-wiz-serp"
+        target="_blank"
+      >
+        lionel Messi google</a
+      >
+    </section>
+
+    <button
+      type="button"
+      style="text-color: white"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      click me to display date and time.
+    </button>
+    <p id="demo" style="color: white"></p>
+
+    <p id="demo1" style="display: none; color: white">Hello Javascript</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo1').style.display='block'"
+    >
+      Click Me
+    </button>
+
+    <script>
+      var mytopthreeanimals = ["cats ", "dog", "tigers"];
+      for (var position = 0; position < mytopthreeanimals.length; position++) {
+        var animal = mytopthreeanimals[position];
+        console.log(animal);
+      }
+
+      var firstanimal = mytopthreeanimals[0];
+      var secondanimal = mytopthreeanimals[1];
+      var thirdanimal = mytopthreeanimals[2];
+      console.log(firstanimal, secondanimal, thirdanimal);
+      var cat = {
+        age: 3,
+        name: "lucy ",
+        color: " grey",
+      };
+
+      document.getElementById("demo2").innerHTML = "date : " + Date();
+    </script>
+  </body>
+</html>
