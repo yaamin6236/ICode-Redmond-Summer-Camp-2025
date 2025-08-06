@@ -1,0 +1,186 @@
+<h1>Heading 1</h1> 1 through 6 replace h1 and 1 with heading type HEADING
+
+<p>Paragraph</p> PARAGRAPHS
+
+<b> BOLD
+<strong> IMPORTANT
+<i> ITALICS
+<em> EMPHASIZED
+<Mark> MARKED
+<br> MAKE LINE STOP EARLIER BREAKS TEXT
+
+<a href="url">link name</a> ADD LINK IN WEB PAGE
+
+_self DEFAULT OPENS DOC IN SAME WINDOW/TAB AS IT WAS CLICKED
+_blank OPENS THE DOC IN A NEW WINDOW OR TAB
+_parent OPENS DOC IN THE PARENT FRAME
+_top OPENS DOC IN THE FULL BODY OF THE WINDOW
+
+<img src ="filename" alt = "text style" width = "value" height = "value"
+../images/name.jpg
+
+<p style = "background-color:pink;"> text </p>
+<p style = "color:green;"> text </p>
+<p style = "font-family: font;"> text ,</p>
+<p style = "font-size: size px;"> text </p>
+<p style = "text-align:center"> text </p>
+
+/*Comment*/
+
+h1{color:blue;text-align:center;}
+
+body {
+	background: lightyellow;
+	font: 18px Arial, sans-serif;
+}
+
+h1, h2, p {
+	color: orange;
+}
+
+p {
+	text-align: center;
+	color: red;
+}
+
+body{
+	background-color: rgb(168, 99, 191);
+}
+
+body{
+	background-image: url("paws.jpeg");
+}
+
+body{
+	background: lightyellow;
+}
+
+h1{
+	border-style: dotted;
+}
+
+BORDER STYLES:
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+none
+hidden
+
+top, right, bottom, left 
+
+body{
+	background: lightyellow
+}
+
+h1{
+	border-style: dotted;
+}
+
+p{
+	text-align: center;
+}
+
+p{
+	text-decoration-line: underline;
+	text-decoration-color: green;
+	text-decoration-style: double;
+	text-decoration-thickness: 5px;
+}
+
+body{
+	background: lightyellow
+}
+
+h1{
+	border-style: dotted;
+	font family: "Lucida Console", "Courier New", monospace;
+}
+
+<html>
+<body>
+
+<div style="background-
+color:black;color:white;padding:20px">
+<h2>HEADING</h2>
+<p>PARAGRAPH</p>
+<p>PARAGRAPH</p>
+</div>
+
+</body>
+</html>
+
+<html>
+<head>
+<style>
+.city {
+	background-color: tomato;
+	color: white;
+	border: 2px solid black
+	margin: 20px;
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="city">
+<h2>HEADING</h2>
+<p>PARAGRAPH</p>
+</div>
+
+</body>
+</html>
+
+<h2>HEADING</h2>
+<p>PARAGRAPH</p>
+
+<!--An element with a unique id-->
+<h1 id="myHeader">My Cities</h1>
+
+div id: Assignment of id attribute to the div block to apply styling or specific div block.
+USED FOR: A specific div block
+
+div class: Assignment of class attribute to number of div blocks to apply styling or interactivity to a group of div blocks.
+USED FOR: A set of div blocks
+
+DATA TYPES:
+
+Numbers in JavaScript look like this:
+5;
+
+Strings are used to represent text:
+"Hi, I'm a string";
+
+Booleans are values that can be true or false:
+true;
+
+var= declares variable in JavaScript
+
+[0][1][2][3] size-1
+[1][2][3][4]
+
+var cat = {
+"age": 3,
+"name": "Happy",
+"color": "Black"
+};
+
+FIND ITEMS: cat["name"];
+
+JavaScript is in between <script>CODE</script>
+
+MAKE BUTTON:
+
+<button type="button"
+onclick="document.getElementById('demo'), innerHTML =Date()">
+Click me to display Date and Time</button>
+
+<p id="demo"></p>
+
+id="demo"
+onclick="document.getElementById('demo').style.display='block'" 

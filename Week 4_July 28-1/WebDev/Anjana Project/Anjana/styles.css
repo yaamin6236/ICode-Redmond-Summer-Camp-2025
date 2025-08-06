@@ -1,0 +1,21 @@
+body { 
+    background: lightcyan;
+    font: 18px Arial, sans-serfix;
+} 
+h1 {
+    color: lightpink;
+
+}
+p { 
+    text-align: center;
+    color: black;
+    font-family:lucida handwriting;
+    font-size: medium;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

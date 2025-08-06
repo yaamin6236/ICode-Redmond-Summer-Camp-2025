@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background: linear-gradient(120deg, #f4f6fb 60%, #e3eafc 100%);
+        margin: 0;
+        padding: 0;
+        color: #222;
+    }
+    body.fade-out {
+        animation: fadeOut 0.4s forwards;
+    }
+    @keyframes fadeOut {
+        to { opacity: 0; }
+    }
+    nav {
+        background: #222;
+        padding: 18px 0;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 22px;
+        font-size: 1.13em;
+        padding: 10px 18px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        display: inline-block;
+        font-weight: 500;
+    }
+    nav a:hover, nav a.active {
+        background: #ff9800;
+        color: #222;
+        box-shadow: 0 2px 8px rgba(255,152,0,0.13);
+    }
+    .container {
+        max-width: 900px;
+        margin: 40px auto 32px auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        padding: 40px 28px 48px 28px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.7em;
+        margin-top: 0;
+        color: #1a237e;
+        letter-spacing: 1px;
+    }
+    p {
+        color: #444;
+        font-size: 1.18em;
+        margin-bottom: 28px;
+        line-height: 1.7;
+    }
+    img {
+        border-radius: 14px;
+        margin-bottom: 32px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #e3eafc;
+    }
+    footer {
+        text-align: center;
+        color: #888;
+        margin: 40px 0 10px 0;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+    @media (max-width: 700px) {
+        .container {
+            padding: 12px 4vw 32px 4vw;
+        }
+        nav {
+            font-size: 0.98em;
+        }
+        h1 {
+            font-size: 2em;
+        }
+    }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="homepage.html" onclick="return animatePageSwitch(event, 'homepage.html')">Home</a>
+    <a href="Baseball.html" class="active" onclick="return animatePageSwitch(event, 'Baseball.html')">Baseball</a>
+    <a href="Soccer.html" onclick="return animatePageSwitch(event, 'Soccer.html')">Soccer</a>
+    <a href="Football.html" onclick="return animatePageSwitch(event, 'Football.html')">Football</a>
+    <a href="Basketball.html" onclick="return animatePageSwitch(event, 'Basketball.html')">Basketball</a>
+    <a href="Tennis.html" onclick="return animatePageSwitch(event, 'Tennis.html')">Tennis</a>
+</nav>
+<div class="container">
+    <h1>Baseball</h1>
+    <p>
+        Baseball is a classic and strategic sport played between two teams of nine players. Teams alternate between offense and defense, aiming to score runs by hitting a pitched ball and running around four bases: first, second, third, and home. The pitcher throws the ball to the batter, who tries to hit it and reach base safely. The team with the most runs at the end of the game wins. Baseball is known for its rich history, teamwork, and exciting moments that bring fans together.
+    </p>
+    <img src="../images/Baseball_(crop).jpg" alt="Baseball">
+</div>
+<footer>
+    <span>😁</span>
+    &copy; 2025 Nathan M. Wang. All rights reserved.
+</footer>
+<script>
+function animatePageSwitch(event, url) {
+    event.preventDefault();
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+        window.location.href = url;
+    }, 400);
+    return false;
+}
+</script>
+</body>
+</html>
+

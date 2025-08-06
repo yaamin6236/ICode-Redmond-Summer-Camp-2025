@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Autobiography</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .lang-btns {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lang-btns button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-btns">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+        <button onclick="setLanguage('es')">Español</button>
+    </div>
+
+    <div id="content">
+        <!-- Content will be inserted here -->
+    </div>
+
+    <script>
+        const data = {
+            en: {
+                start: "<h2>The Start</h2><p>Welcome to my autobiography website! Here, I share my life stories, hobbies, and more. Come back every week for updates if you're interested in how my life works. Chao!</p>",
+                whoami: "<h2>Who am I?</h2><p>I'm MM, the creator of this website. I started this project at age 11 and have enjoyed building it ever since. You'll find stories, quizzes, and fun facts about me here!</p>",
+                about: "<h2>About Me</h2><p>I'm 40% Indian and 60% European. I consider myself a mix of alien, tomboy, and girly. I love exploring who I am and sharing my journey with you.</p>",
+                why: "<h2>Why I Created This Website</h2><p>I wanted a place to express myself and share my stories with the world. Building this website lets me do just that!</p>",
+                hobbies: "<h2>My Hobbies</h2><p>Working on math problems, spying, learning new languages, having fun with friends, exercising, and gaming.</p>",
+                updates: "<h2>Come back for more updates soon!</h2>"
+            },
+            ru: {
+                start: "<h2>Начало</h2><p>Добро пожаловать на мой автобиографический сайт! Здесь я делюсь историями из жизни, увлечениями и многим другим. Возвращайтесь каждую неделю за обновлениями, если вам интересно узнать, как я живу. Чао!</p>",
+                whoami: "<h2>Кто я?</h2><p>Я MM, создатель этого сайта. Я начал этот проект в 11 лет и с тех пор мне нравится его развивать. Здесь вы найдете истории, викторины и интересные факты обо мне!</p>",
+                about: "<h2>Обо мне</h2><p>Я на 40% индиец и на 60% европеец. Я считаю себя смесью инопланетянина, сорванца и девочки. Мне нравится исследовать себя и делиться этим с вами.</p>",
+                why: "<h2>Почему я создал этот сайт</h2><p>Я хотел место, где могу выразить себя и поделиться своими историями с миром. Создание этого сайта позволяет мне это!</p>",
+                hobbies: "<h2>Мои увлечения</h2><p>Решение математических задач, шпионство, изучение новых языков, веселье с друзьями, спорт и игры.</p>",
+                updates: "<h2>Возвращайтесь за новыми обновлениями!</h2>"
+            },
+            es: {
+                start: "<h2>El Comienzo</h2><p>¡Bienvenido a mi sitio web autobiográfico! Aquí comparto historias de mi vida, pasatiempos y más. Vuelve cada semana para ver actualizaciones si te interesa saber cómo es mi vida. ¡Chao!</p>",
+                whoami: "<h2>¿Quién soy?</h2><p>Soy MM, el creador de este sitio web. Comencé este proyecto a los 11 años y me ha encantado construirlo desde entonces. ¡Aquí encontrarás historias, cuestionarios y datos divertidos sobre mí!</p>",
+                about: "<h2>Sobre mí</h2><p>Soy 40% indio y 60% europeo. Me considero una mezcla de alienígena, marimacho y femenina. Me encanta explorar quién soy y compartir mi viaje contigo.</p>",
+                why: "<h2>Por qué creé este sitio web</h2><p>Quería un lugar para expresarme y compartir mis historias con el mundo. ¡Construir este sitio web me lo permite!</p>",
+                hobbies: "<h2>Mis pasatiempos</h2><p>Resolver problemas de matemáticas, espiar, aprender nuevos idiomas, divertirme con amigos, hacer ejercicio y jugar videojuegos.</p>",
+                updates: "<h2>¡Vuelve pronto para más actualizaciones!</h2>"
+            }
+        };
+
+        function setLanguage(lang) {
+            const c = data[lang];
+            document.getElementById('content').innerHTML =
+                c.start + c.whoami + c.about + c.why + c.hobbies + c.updates;
+        }
+
+        // Set default language
+        setLanguage('en');
+    </script>
+</body>
+</html>

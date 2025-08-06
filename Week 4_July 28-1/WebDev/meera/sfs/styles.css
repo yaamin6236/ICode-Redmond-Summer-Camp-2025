@@ -1,0 +1,111 @@
+/* Reset some default styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.lang-btns {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.lang-btns button {
+    margin: 0 12px;
+    padding: 10px 24px;
+    font-size: 17px;
+    border: none;
+    border-radius: 6px;
+    background: #4f8cff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+}
+
+.lang-btns button:hover,
+.lang-btns button:focus {
+    background: #2563eb;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
+#content {
+    max-width: 650px;
+    margin: 30px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 36px 32px 32px 32px;
+}
+
+h2 {
+    color: #2563eb;
+    margin-bottom: 10px;
+    margin-top: 28px;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.13em;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    #content {
+        padding: 18px 8px 18px 8px;
+        max-width: 98vw;
+    }
+    .lang-btns button {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+}
+
+h2 {color:rgb(47, 0, 255); text-align: center;}
+body {
+    background: lightyellow;
+    font: 18px Arial, sans-serif;
+}
+h1 {
+    color: orange;
+}
+
+h1, h2, p {
+    text align: center;
+    color: red; 
+}
+
+body{
+
+    background-color: rgb
+}
+
+body{
+
+    background: lightyellow;
+
+}
+
+h1{
+
+    border-style: dotted;
+
+}
+
+p{
+    text-decoration-line: underline;
+    text-decoration-color: green;
+    text-decoration-style: double;
+    
+}
