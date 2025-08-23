@@ -1,0 +1,28 @@
+body {
+    background-image: url("images/elon.jpg")
+}
+body {
+    border-style:dotted double groove;
+    border-width: 9px;
+}
+h2{
+    color: #00122e;
+    font-family: 'Gill Sans';
+}
+h1 {
+    font-family: 'Lucida Grande';
+    font-size: 50px;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium
+}
+.fun {
+    text-align: right;
+    color:hotpink;
+    font-weight: bolder;
+}
+#caterpillar {
+    position: relative;
+    top: 30px;
+}

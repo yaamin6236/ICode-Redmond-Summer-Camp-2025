@@ -1,0 +1,21 @@
+body {
+    background-color:#F6E6CB ;
+    border-style: double;
+    border-color: #E7D4B5;
+    border-width: 14px;
+    
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    text-align: center; color: #6b614e;
+}
+
+/* CSS comments */
+
+#paral {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.center {
+    font-family: 'Times New Roman', Times, serif;
+}

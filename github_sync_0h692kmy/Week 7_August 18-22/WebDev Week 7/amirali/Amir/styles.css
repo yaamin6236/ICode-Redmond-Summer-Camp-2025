@@ -1,0 +1,246 @@
+/* Jurassic world */
+body {
+    background-color: #2980b9; /* Blue */
+    font: 18px Arial, sans-serif;
+    color: rgb(31, 17, 221);
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #e74c3c; /* Red */
+    text-align: center;
+}
+
+h2 {
+    color: #f1c40f; /* Yellow */
+    text-align: left;
+    margin-left: 40px;
+}
+
+h3 {
+    color: #27ae60; /* Green */
+}
+
+h4 {
+    color: #2980b9; /* Blue */
+}
+
+h5 {
+    color: #e67e22; /* Orange */
+}
+
+h6 {
+    color: #e74c3c; /* Red */
+}
+
+p {
+    color: #34495e; /* Blue Gray */
+    text-decoration-line: underline;
+    text-decoration-color: #000000;
+    text-decoration-style: double;
+    text-decoration-thickness: 2px;
+    margin: 16px 0;
+}
+
+a {
+    color: #2980b9; /* Light Blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3498db; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker Blue */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #ecf0f1; /* Light Gray */
+    border-left: 6px solid #3498db; /* Blue */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Light Blue */
+    color: white;
+}
+
+footer {
+    background-color: #2c3e50; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+span.dino-word {
+    color: #16a085; /* Teal */
+}
+
+span.movie-word {
+    color: #e74c3c; /* Red */
+}
+
+span.highlight {
+    color: #f1c40f; /* Yellow */
+}
+
+/* Custom list styles */
+ul.custom-list {
+    list-style-type: square;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+ul.custom-list li {
+    color: #e67e22; /* Orange */
+    font-weight: bold;
+    margin-bottom: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Custom table styles */
+table.custom-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+}
+
+table.custom-table th,
+table.custom-table td {
+    border: 2px solid #2980b9;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+table.custom-table th {
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+table.custom-table tr:nth-child(even) {
+    background-color: #d6eaf8;
+}
+
+/* Alignment helpers */
+.align-left {
+    text-align: left;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.align-right {
+    text-align: right;
+    margin-right: 40px;
+    margin-left: auto;
+}
+
+.align-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove erroneous/incomplete CSS */
+
+.jurassic-world-theme .title {
+    text-align: center;
+    margin-top: 20px;
+}
+.jurassic-world-theme .title img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+.jurassic-world-theme .title h1 {
+    font-size: 2.5em;
+    color: #ff1900; /* Red */
+}
+/* Removed invalid HTML block */
+.jurassic-world-theme .title p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 10px;
+}
+div{
+width:100px;
+height:100px;
+background-color: green;
+animation-name: example;
+animation-duration: 4s;
+}
+@keyframes example {
+from {background-color:green;}
+to{background-color:pink;}
+}
+
+/* Add this to your CSS for animated titles */
+.animated-title {
+    animation: titleFadeIn 2s ease-in-out, titleColorCycle 3s infinite alternate;
+}
+
+@keyframes titleFadeIn {
+    from { opacity: 0; transform: scale(0.8);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+@keyframes titleColorCycle {
+    0% { color: #e74c3c; }
+    25% { color: #f1c40f; }
+    50% { color: #27ae60; }
+    75% { color: #2980b9; }
+    100% { color: #e67e22; }
+}

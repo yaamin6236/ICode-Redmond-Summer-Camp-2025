@@ -1,0 +1,32 @@
+
+.centerc {
+    justify-content: center;
+     align-items: center;
+     margin: 10vh auto 0;
+     min-height: 80%;
+     padding: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  height: 10vh;             /* full viewport height */
+  margin: 0;                 /* remove default spacing */
+  text-decoration-color: red;
+}
+#title {
+    text-decoration-color: red;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(#d75f56, #d79456, #54e780, #54c5e7, #3734c9, #c93497, #c93434);
+    background-size: 500% 500%;
+    animation: bgchange 25s ease infinite;
+}
+@keyframes bgchange {
+     0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

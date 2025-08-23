@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Engines</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #222;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 3em;
+            animation: popInFromTop 1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+        }
+
+        h2 {
+            color: #2980b9;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .topic-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .topic-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 340px;
+            height: 160px;
+            background: linear-gradient(135deg, #2980b9 60%, #f7b731 100%);
+            color: #fff;
+            font-size: 2.2em;
+            font-weight: bold;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            opacity: 0;
+            animation: popInFromTop 1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+        }
+
+        .topic-box:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 40px rgba(44,62,80,0.28);
+        }
+
+        .pop-in {
+            opacity: 0;
+            animation: popInFromTop 1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+        }
+
+        @keyframes popInFromTop {
+            0% {
+                opacity: 0;
+                transform: translateY(-200px) scale(0.5);
+            }
+            80% {
+                opacity: 1;
+                transform: translateY(20px) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+            padding: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.3em;
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #f7b731;
+        }
+
+        img.subtopic-img {
+            display: block;
+            margin: 30px auto 20px auto;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <h1>Welcome to Car Engines</h1>
+        <div class="topic-container">
+            <a href="#engine1" class="topic-box pop-in">V8 Engine</a>
+            <a href="#engine2" class="topic-box pop-in">V6 Engine</a>
+            <a href="#engine3" class="topic-box pop-in">Inline 4 Engine</a>
+            <a href="#engine4" class="topic-box pop-in">Flat Engine</a>
+        </div>
+
+        <div id="engine1" class="engine-details" style="display:none;">
+            <h2>V8 Engine</h2>
+            <p>The V8 engine is a popular engine configuration that consists of eight cylinders arranged in a V shape. It is known for its power and performance, making it a favorite in muscle cars and high-performance vehicles.</p>
+            <img src="images/your-image.jpg" alt="Description" class="subtopic-img">
+            <a href="#" class="back-link">Back to Topics</a>
+        </div>
+
+        <div id="engine2" class="engine-details" style="display:none;">
+            <h2>V6 Engine</h2>
+            <p>The V6 engine is a six-cylinder engine with cylinders arranged in a V configuration. It offers a good balance between power and fuel efficiency, making it a popular choice for many modern cars.</p>
+            <img src="images/your-image.jpg" alt="Description" class="subtopic-img">
+            <a href="#" class="back-link">Back to Topics</a>
+        </div>
+
+        <div id="engine3" class="engine-details" style="display:none;">
+            <h2>Inline 4 Engine</h2>
+            <p>The Inline 4 engine is a four-cylinder engine with all cylinders arranged in a straight line. It is one of the most common engine types found in cars today, known for its compact size and fuel efficiency.</p>
+            <img src="images/your-image.jpg" alt="Description" class="subtopic-img">
+            <a href="#" class="back-link">Back to Topics</a>
+        </div>
+
+        <div id="engine4" class="engine-details" style="display:none;">
+            <h2>Flat Engine</h2>
+            <p>The Flat engine, also known as a boxer engine, has cylinders arranged horizontally in two banks on either side of a central crankshaft. This design provides a low center of gravity and is used in some sports cars and motorcycles.</p>
+            <img src="images/your-image.jpg" alt="Description" class="subtopic-img">
+            <a href="#" class="back-link">Back to Topics</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.topic-box').forEach(box => {
+            box.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).style.display = 'block';
+                document.querySelector('.page-content').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.back-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector('.page-content').style.display = 'block';
+                document.querySelectorAll('.engine-details').forEach(detail => {
+                    detail.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

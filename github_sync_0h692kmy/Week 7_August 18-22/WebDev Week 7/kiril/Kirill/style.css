@@ -1,0 +1,43 @@
+body {
+    background-color:teal;
+}
+h1  {
+    border-style: double;
+    border-color:darkgreen;
+    background-color:crimson ;
+    text-decoration-style: double;
+    text-decoration-color: coral;
+}
+
+h2{
+    text-decoration-line: overline;
+    text-decoration-style:dashed;
+    text-decoration-color: chartreuse;
+}
+p{
+    text-decoration-line: overline;
+    text-decoration-style: dotted;
+    text-decoration-color: chocolate;
+    text-decoration-thickness: 3px;
+}
+h3{
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color:darkgreen;
+    text-decoration-thickness: 2px;
+}
+caption{
+    color:coral;
+    font-size: x-large;
+}
+div {
+    width: 2000px;
+    height: 100px;
+    background-color: red;
+    animation-name: animation;
+    animation-duration: 5s;
+}
+@keyframes animation {
+    from {background-color: red;}
+    to {background-color: blue;}
+}

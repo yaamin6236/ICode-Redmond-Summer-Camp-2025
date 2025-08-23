@@ -1,0 +1,20 @@
+h1 {
+    color: #a39d8d;
+    text-align: center;
+}
+
+body{
+    color: #a39d8d;
+    border-style: double; border-color: #a39d8d;
+}
+/*this is a comment*/
+
+p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.center {
+    text-align: center;
+    border-style: double;
+}

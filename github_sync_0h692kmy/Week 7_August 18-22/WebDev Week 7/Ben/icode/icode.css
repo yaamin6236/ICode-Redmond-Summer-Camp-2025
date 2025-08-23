@@ -1,0 +1,126 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .location-btn {
+        background-color: #0057d8;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+      font-size: 16px;
+    }
+
+    .menu button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+       body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background: linear-gradient(to right, #0057d8, #66b3ff);
+      color: rgb(0, 0, 0);
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: #ffc107;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hero img {
+      max-width: 40%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-content, .hero img {
+        max-width: 100%;
+      }
+    }
+
+    #floating-bot {
+    position: static;
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+    z-index: 300;
+    pointer-events: none; 
+}
+
+.floating-image {
+  position: absolute;
+  top: 300px;    /* Adjust to move vertically */
+  left: 750px;   /* Adjust to move horizontally */
+  z-index: 10;   /* Makes sure it floats above other elements */
+}
+
+.floating-image img {
+  width: 400px;
+  height: auto;
+}

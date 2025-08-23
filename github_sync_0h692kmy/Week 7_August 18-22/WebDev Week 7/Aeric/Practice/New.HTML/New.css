@@ -1,0 +1,21 @@
+.logo-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  color: white; 
+  font-weight: bold;
+  font-size: 1rem;
+}
+    .logo span {
+  font-size: 2rem;
+  font-weight: 700;
+} 
+

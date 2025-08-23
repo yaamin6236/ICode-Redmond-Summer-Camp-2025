@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Hangman</title>
+</head>
+<body>
+
+<h1>Hangman Game</h1>
+<p id="wordDisplay"></p>
+<p>Guess a letter:</p>
+<input type="text" id="letterInput" maxlength="1">
+<button onclick="guessLetter()">Guess</button>
+
+<p id="guessedLetters"></p>
+<p id="lives"></p>
+<p id="message"></p>
+
+<script>
+  const word = "icode, hangman, computer, gaming"; // You can change this word
+  let guessed = [];
+  let lives = 15;
+
+  function updateDisplay() {
+    let display = "";
+    for (let letter of word) {
+      display += guessed.includes(letter) ? letter + " " : "_ ";
+    }
+    document.getElementById("wordDisplay").textContent = display.trim();
+    document.getElementById("guessedLetters").textContent = "Guessed: " + guessed.join(", ");
+    document.getElementById("lives").textContent = "Lives: " + lives;
+  }
+
+  function guessLetter() {
+    const input = document.getElementById("letterInput");
+    const letter = input.value.toLowerCase();
+    input.value = "";
+
+    if (!letter.match(/[a-z]/i)) {
+      alert("Please enter a letter.");
+      return;
+    }
+
+    if (guessed.includes(letter)) {
+      alert("You already guessed that letter.");
+      return;
+    }
+
+    guessed.push(letter);
+
+    if (!word.includes(letter)) {
+      lives--;
+    }
+
+    updateDisplay();
+
+    if (lives <= 0) {
+      document.getElementById("message").textContent = "Game Over! The word was: " + word;
+    } else if (!document.getElementById("wordDisplay").textContent.includes("_")) {
+      document.getElementById("message").textContent = "You Win!";
+    }
+  }
+
+  // Initial display
+  updateDisplay();
+</script>
+
+</body>
+</html>

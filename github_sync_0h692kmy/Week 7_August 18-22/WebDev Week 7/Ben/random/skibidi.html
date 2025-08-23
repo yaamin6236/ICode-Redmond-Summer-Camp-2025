@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Hues Hero Section</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefcfd;
+      color: #1b0c2b;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 550px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #5e5e5e;
+      line-height: 1.6;
+    }
+
+    .hero-btn {
+      margin-top: 25px;
+      padding: 14px 24px;
+      font-size: 16px;
+      background-color: #f35d5d;
+      color: #21072f;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: #e14b4b;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text,
+      .hero-image {
+        max-width: 100%;
+      }
+
+      .hero-btn {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>Curated colors in context.</h1>
+      <p>
+        Not sure what colors to use in your designs or where to use them? Happy Hues is a color palette inspiration site that acts as a real world example as to how the colors could be used in your design projects.
+      </p>
+      <button class="hero-btn">Try changing the palette!</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/New Project.png" alt="Design example">
+    </div>
+  </div>
+
+</body>
+</html>

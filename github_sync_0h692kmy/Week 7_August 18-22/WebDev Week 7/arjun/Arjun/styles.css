@@ -1,0 +1,47 @@
+
+body{
+    border-style:dotted;
+
+ background: lightyellow;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: example;
+    animation-duration: 10s;
+}
+@keyframes example{ 
+    from {background-color: green;}
+    to {background-color: pink;}
+}
+
+
+h2{
+    text-align: center;
+     text-decoration-line: overline;
+ text-decoration-color: rgb(10, 77, 10);
+ text-decoration-style: double;
+ text-decoration-thickness: 2px;
+
+
+}
+h1{
+    text-align: center;
+     text-decoration-line: underline;
+ text-decoration-color: rgb(100, 12, 12);
+ text-decoration-style: double;
+ text-decoration-thickness: 2px;
+
+}
+
+h3{
+    text-align: center;
+     text-decoration-line: underline;
+ text-decoration-color: rgb(59, 208, 228);
+ text-decoration-style: double;
+ text-decoration-thickness: 2px;
+
+}
+
+

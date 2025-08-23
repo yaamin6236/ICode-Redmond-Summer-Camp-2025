@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hues</title>
+    <link rel="stylesheet" href="aNY.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Row of Boxes</title>
+  <style>
+    .container {
+      display: flex;          
+      gap: 20px;              
+      margin-top: 800x;
+    }
+     .box {
+      flex: 0 0 150px;        /* fixed width */
+      height: 100px;
+      background-color: #f2f2f2;
+      animation: pizza 20s infinite;
+      border: 4px inset #333;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;    /* vertical centering */
+      justify-content: center;/* horizontal centering */
+      font-size: 18px;
+      font-family: sans-serif;
+      position: relative;
+      top: 420px;
+      left: 5%;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">NYC</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='#'>Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+            </ul>
+    </div>
+    </nav>
+    
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">NYC</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Subpage 1</a></li>
+                    <li><a href="#">Subpage 2</a></li>
+                    <li><a href="#">Subpage 3</a></li>
+                </ul>
+            </li>
+        <li><a href='#'>Page 2</a></li>
+        <li><a href='#'>Page 3</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="titleblk">
+    <h1 id="welcome">Welcome to NYC</h1>
+    </div>
+<div class="container">
+    <div class="box">Food</div>
+    <div class="box">Culture</div>
+    <div class="box">Tourism</div>
+    <div class="box">Cheesecake</div>
+</div>
+
+
+</body>

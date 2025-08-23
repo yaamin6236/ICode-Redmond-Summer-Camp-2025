@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - iCode</title>
+ <link rel="stylesheet" href="icode.css">
+
+
+</head>
+<body>
+
+  <div class="navbar">
+ <h1><img src ="C:\Users\icode-user-10\frank\images.png\Screenshot 2025-08-20 100205-Photoroom.png"></h1>
+
+    <div class="nav-links">
+      <a href="https://www.pinterest.com/pin/3659243440395554/">Programs</a>
+      
+      
+      <div class="dropdown">
+        <a href="#">Resources ▼</a>
+        <div class="dropdown-content">
+          <a href="https://www.pinterest.com/pin/633387443152477/">Partnerships</a>
+          <a href="https://www.pinterest.com/pin/240872280066498974/">News</a>
+          <a href="https://www.pinterest.com/pin/2603712281202147/">Press Release</a>
+          <a href="https://www.pinterest.com/pin/19984792092682534/">Franchise</a>
+          <a href="https://www.pinterest.com/pin/155303888166305333/">FAQ</a>
+        </div>
+      </div>
+
+      <a href="https://www.pinterest.com/pin/4595993876284269056/">Shop</a>
+    </div>
+
+    <div style="position: relative;">
+      <button class="location-btn" onclick="toggleLocationDropdown()">CHOOSE YOUR LOCATION ▼</button>
+      <div class="location-dropdown" id="locationDropdown">
+        <a href="https://www.pinterest.com/pin/3096293490910987/">Japan</a>
+        <a href="https://www.pinterest.com/pin/13370130138940607/">China</a>
+        <a href="#">Vietnam</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleLocationDropdown() {
+      const dropdown = document.getElementById("locationDropdown");
+      dropdown.classList.toggle("show");
+    }
+
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.location-btn')) {
+        const dropdown = document.getElementById("locationDropdown");
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

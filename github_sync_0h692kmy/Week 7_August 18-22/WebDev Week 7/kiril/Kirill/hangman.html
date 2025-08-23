@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hangman Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    #word {
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+      margin: 1rem 0;
+    }
+    #message {
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    #letters {
+      margin: 1rem 0;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #wrong-letters {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hangman Game</h1>
+  <div id="word">_ _ _ _ _</div>
+  <div id="message"></div>
+
+  <div id="letters"></div>
+
+  <div>Wrong letters: <span id="wrong-letters"></span></div>
+
+  <button id="reset">Reset Game</button>
+
+  <script>
+    const words = ["javascript", "hangman", "coding", "computer", "programming", "magma", "kitsune", "trident", "katana"];
+    let selectedWord = "";
+    let guessedLetters = [];
+    let wrongLetters = [];
+    const maxWrong = 6;
+
+    const wordEl = document.getElementById("word");
+    const messageEl = document.getElementById("message");
+    const lettersEl = document.getElementById("letters");
+    const wrongLettersEl = document.getElementById("wrong-letters");
+    const resetBtn = document.getElementById("reset");
+
+    function init() {
+      selectedWord = words[Math.floor(Math.random() * words.length)];
+      guessedLetters = [];
+      wrongLetters = [];
+      messageEl.textContent = "";
+      wrongLettersEl.textContent = "";
+      createLetterButtons();
+      updateWordDisplay();
+    }
+
+    function createLetterButtons() {
+      lettersEl.innerHTML = "";
+      for (let i = 65; i <= 90; i++) { // A-Z
+        const btn = document.createElement("button");
+        btn.textContent = String.fromCharCode(i);
+        btn.addEventListener("click", () => handleGuess(btn));
+        lettersEl.appendChild(btn);
+      }
+    }
+
+    function handleGuess(button) {
+      const letter = button.textContent.toLowerCase();
+      button.disabled = true;
+
+      if (selectedWord.includes(letter)) {
+        guessedLetters.push(letter);
+        updateWordDisplay();
+        checkWin();
+      } else {
+        wrongLetters.push(letter);
+        wrongLettersEl.textContent = wrongLetters.join(", ");
+        if (wrongLetters.length >= maxWrong) {
+          gameOver(false);
+        }
+      }
+    }
+
+    function updateWordDisplay() {
+      let display = "";
+      for (const char of selectedWord) {
+        if (guessedLetters.includes(char)) {
+          display += char + " ";
+        } else {
+          display += "_ ";
+        }
+      }
+      wordEl.textContent = display.trim();
+    }
+
+    function checkWin() {
+      const won = selectedWord.split("").every(char => guessedLetters.includes(char));
+      if (won) {
+        gameOver(true);
+      }
+    }
+
+    function gameOver(won) {
+      lettersEl.querySelectorAll("button").forEach(btn => btn.disabled = true);
+      if (won) {
+        messageEl.textContent = "🎉 You won! 🎉";
+      } else {
+        messageEl.textContent = `Game over! The word was "${selectedWord}".`;
+        updateWordDisplay(); // Reveal the word
+      }
+    }
+
+    resetBtn.addEventListener("click", init);
+
+    // Start game on load
+    init();
+  </script>
+</body>
+</html>

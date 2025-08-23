@@ -1,0 +1,44 @@
+ h1 {color:rgb(0, 183, 255);text-align: center;}
+
+
+
+ body {
+    background: lightyellow;
+      font: 18px Arial, sans-sereif;}
+
+
+
+
+
+
+
+#para1 {
+   text-align: center;
+ 
+
+
+ }
+body{
+   text-align: center;
+   background-image: url(paws.jpeg);
+}
+h1{
+   border: double;
+   color:black
+}
+h2{border:dashed;
+   color:aqua aquamarine azure lightblue ;
+}
+h2{color:  rgb(8, 92, 92);}
+div {
+   width: 100px;
+   height: 100px;
+   background-color:blue;
+   animation-name: bob;
+   animation-duration: 5s;
+}
+
+@keyframes bob {
+from {background-color: blue;}
+to {background-color: black;}
+}

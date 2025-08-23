@@ -1,0 +1,89 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    color: #020826;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+h2 {
+    color: #020826;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: #716040;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.image {
+    float: left;
+    margin-right: 10px; /* Adds space between the image and text */
+}
+
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #F9F4EF; /* match your background */
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text-content {
+      max-width: 50%;
+    }
+
+    .text-content h1 {
+      font-size: 2.2em;
+      color: #0d1b2a; /* dark text */
+    }
+
+    .text-content p {
+      color: #5e5e5e;
+      line-height: 1.6;
+    }
+
+    .text-content button {
+      margin-top: 20px;
+      background-color: #9b8357;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .image-content img {
+      max-width: 10000px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content, .image-content {
+        max-width: 100%;
+      }
+
+      .image-content img {
+        max-width: 80%;
+      }
+    }
+
+

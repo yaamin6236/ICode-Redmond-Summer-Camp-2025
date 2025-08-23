@@ -1,0 +1,46 @@
+body {
+          animation: slideshow 20s infinite;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+
+}
+@keyframes slideshow {
+    0% {background-image: url(images/ladyliberty.jpg); }
+    35% {background-image: url(images/NYCtaxi.webp); }
+    50% {background-image: url(images/skyline.jpg.jpg); }
+    75% {background-image: url(images/anothercharm.jpg); }
+    100% {background-image: url(images/centralpark.jpg); }
+}
+#welcome {
+    font-size: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder;
+    color: azure;
+   
+    
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.titleblk {
+    position:relative;
+    top: 500px;
+}
+.tabs {
+    font-size: large;
+    position:relative;
+    top:550px;
+}
+@keyframes pizza {
+    0% {background-color: rgba(87, 172, 144, 0.466);}
+    35% {background-color: rgba(172, 172, 49, 0.616)}
+    50% {background-color: rgba(90, 118, 179, 0.459);}
+    75% {background-color: rgba(224, 179, 224, 0.466)}
+    100% {background-color: rgba(146, 180, 146, 0.582)}
+}
+body {
+    background-color: blanchedalmond;
+}

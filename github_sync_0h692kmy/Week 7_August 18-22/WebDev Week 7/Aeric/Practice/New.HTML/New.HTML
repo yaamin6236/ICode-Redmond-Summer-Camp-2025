@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Hues</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #232946;
+      color: #ffffff;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #b8c1ec;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background-color: #eebbc3;
+      color: #232946;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #e5aab2;
+    }
+
+    .right img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .text-box {
+      display: inline-block;
+      padding: 20px 30px;
+      background-color: #eebbc3; 
+      color: #1d1b2f; 
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 6px; 
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .text-box:hover {
+      background-color: #ff8787; 
+    }
+
+    .section-colors {
+      padding: 40px 20px;
+      background-color: #232946;
+      color: #ffffff;
+    }
+
+    .color-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .color-box {
+      flex: 1 1 200px;
+      background-color: #1e1e2f;
+      padding: 20px;
+      border-radius: 6px;
+      color: white;
+    }
+
+    .color-sample {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .hex {
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: right;
+      padding: 20px;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      background: #444;
+      padding: 4px 8px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="logo"><p>ㅤㅤㅤㅤㅤㅤ</p>
+      <img src="Screenshot 2025-08-19 104354.png" alt="Happy Hues Logo" />
+      <span id="HappyHuelogo-link"><h1>Happy Hues</h></span>
+    </div>
+  </a>
+
+  <div class="container">
+    <div class="left">
+      <h1>Curated colors<br />in context.</h1>
+      <p>
+        Not sure what colors to use in your designs or where to use them?
+        Happy Hues is a color palette inspiration site that acts as a real
+        world example as to how the colors could be used in your design projects.
+      </p>
+      <a class="text-box" href="https://www.happyhues.co/">Try changing the palette!</a>
+    </div>
+
+    <div class="right">
+      <img src="Screenshot 2025-08-19 111001.png" alt="Palette Example" />
+    </div>
+  </div>
+
+  <div class="section-colors">
+    <h2>This section's hues</h2>
+    <p>Copy the hex code to try the color out</p>
+    <h3>Elements</h3>
+    <div class="color-grid">
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #232946;"></div>
+        Background — <span class="hex">#232946</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #eebbc3;"></div>
+        Button — <span class="hex">#eebbc3</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #ffffff;"></div>
+        Headline — <span class="hex">#ffffff</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #b8c1ec;"></div>
+        Paragraph — <span class="hex">#b8c1ec</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #232946;"></div>
+        Button Text — <span class="hex">#232946</span>
+      </div>
+    </div>
+
+    <h3>Illustration</h3>
+    <div class="color-grid">
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #121629;"></div>
+        Stroke — <span class="hex">#232946</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #b8c1ec;"></div>
+        Main — <span class="hex">#232946</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #eebbc3;"></div>
+        Highlight — <span class="hex">#232946</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #fffffe;"></div>
+        Secondary — <span class="hex">#232946</span>
+      </div>
+      <div class="color-box">
+        <div class="color-sample" style="background-color: #eebbc3;"></div>
+        Tertiary — <span class="hex">#232946</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

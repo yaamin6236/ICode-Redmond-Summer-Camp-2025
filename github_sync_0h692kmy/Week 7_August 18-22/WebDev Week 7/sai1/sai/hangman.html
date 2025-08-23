@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman with Random Word</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #f0f0f0;
+    }
+
+    #wordDisplay {
+      font-size: 2em;
+      letter-spacing: 10px;
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      font-size: 1.2em;
+      padding: 5px;
+      width: 50px;
+      text-align: center;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    #wrongGuesses {
+      margin-top: 10px;
+      color: red;
+    }
+
+    .letter-box {
+      display: inline-block;
+      border-bottom: 2px solid #333;
+      width: 30px;
+      height: 40px;
+      margin: 0 5px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess the Word</h1>
+
+  <div id="wordDisplay"></div>
+
+  <input type="text" id="letterInput" maxlength="1" autofocus />
+  <button onclick="submitGuess()">Guess</button>
+
+  <div id="message"></div>
+  <div id="wrongGuesses">Wrong guesses: </div>
+
+  <script>
+    // 1. List of possible words
+    const wordList = ['icode', 'apple', 'developer', 'hangman', 'javascript'];
+
+    // 2. Randomly choose one word
+    const word = wordList[Math.floor(Math.random() * wordList.length)];
+
+    // 3. Arrays to store correct and wrong guesses
+    let guessedLetters = [];
+    let wrongLetters = [];
+
+    // 4. Get references to HTML elements
+    const wordDisplay = document.getElementById('wordDisplay');
+    const letterInput = document.getElementById('letterInput');
+    const messageDiv = document.getElementById('message');
+    const wrongDiv = document.getElementById('wrongGuesses');
+
+    // 5. Function to update the visual word display
+    function updateDisplay() {
+      // For each letter in the word, show it if guessed, or a blank otherwise
+      wordDisplay.innerHTML = word.split('').map(letter =>
+        guessedLetters.includes(letter)
+          ? `<span class="letter-box">${letter}</span>`  // Show correct letter
+          : `<span class="letter-box">&nbsp;</span>`    // Show blank
+      ).join('');
+
+      // Show wrong guesses below
+      wrongDiv.textContent = `Wrong guesses: ${wrongLetters.join(', ')}`;
+    }
+
+    // 6. Function that runs when the user guesses a letter
+    function submitGuess() {
+      const letter = letterInput.value.toLowerCase();  // Get typed letter
+      letterInput.value = '';                          // Clear input box
+      messageDiv.textContent = '';                     // Clear message
+
+      // Check if the input is a valid single letter
+      if (!letter.match(/[a-z]/) || letter.length !== 1) {
+        messageDiv.textContent = '❗ Please enter a valid letter.';
+        return;
+      }
+
+      // Prevent repeated guesses
+      if (guessedLetters.includes(letter) || wrongLetters.includes(letter)) {
+        messageDiv.textContent = '🔁 You already guessed that letter.';
+        return;
+      }
+
+      // If the guessed letter is in the word
+      if (word.includes(letter)) {
+        guessedLetters.push(letter);
+        messageDiv.textContent = '✅ This letter is right!';
+      } else {
+        // If the guessed letter is wrong
+        wrongLetters.push(letter);
+        messageDiv.textContent = '❌ Wrong guess.';
+      }
+
+      // Update the word display
+      updateDisplay();
+
+      // If all letters have been guessed
+      if (word.split('').every(letter => guessedLetters.includes(letter))) {
+        messageDiv.textContent = '🎉 You guessed the word!';
+        letterInput.disabled = true; // Disable further input
+      }
+    }
+
+    // 7. Allow Enter key to submit the guess
+    letterInput.addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        submitGuess();
+      }
+    });
+
+    // 8. Initial setup: show blanks for the word
+    updateDisplay();
+  </script>
+
+</body>
+</html>

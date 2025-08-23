@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Word Guess</title>
+</head>
+<body>
+
+<h1>Word Guess Game</h1>
+<p id="wordDisplay"></p>
+<input type="text" id="guessInput" maxlength="1" placeholder="Guess a letter">
+<button id="guessBtn">Guess</button>
+<p id="message"></p>
+
+<script>
+var words = ["robot", "basket", "snake"];
+var word = words[Math.floor(Math.random() * words.length)]; // random word
+var answerArray = Array(word.length).fill("_"); // blanks
+var remaining = word.length;
+
+document.getElementById("wordDisplay").textContent = answerArray.join(" ");
+
+document.getElementById("guessBtn").onclick = function() {
+    var guess = document.getElementById("guessInput").value.toLowerCase();
+    document.getElementById("guessInput").value = "";
+    var correct = false;
+
+    for (var i = 0; i < word.length; i++) {
+        if (word[i] === guess && answerArray[i] === "_") {
+            answerArray[i] = guess;
+            remaining--;
+            correct = true;
+        }
+    }
+
+    document.getElementById("wordDisplay").textContent = answerArray.join(" ");
+
+    if (remaining === 0) {
+        document.getElementById("message").textContent = "You guessed the word! 🎉";
+        this.disabled = true;
+    } else {
+        document.getElementById("message").textContent = correct ? "Good guess!" : "Wrong guess!";
+    }
+};
+
+function m0ut(obj) {
+    obj.innerHTML = "BOOM"
+}
+</script>
+<h2 onclick="this.innerHTML='Youfoundthesecrettext'">Click on this text!</h2>
+</body>
+</html>
