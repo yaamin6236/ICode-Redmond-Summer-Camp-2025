@@ -1,0 +1,32 @@
+def example(num1, num2):
+    print(num1, num2)
+
+# Call the example function
+example(2, 4)
+
+# Simple multiplication script
+num1 = float(input("Enter the first number for multiplication: "))
+num2 = float(input("Enter the second number for multiplication: "))
+result = num1 * num2
+print(f"The result of {num1} multiplied by {num2} is {result}")
+
+# Simple addition script
+num1 = float(input("Enter the first number for addition: "))
+num2 = float(input("Enter the second number for addition: "))
+result = num1 + num2
+print(f"The sum of {num1} and {num2} is {result}")
+
+# Simple division script
+num1 = float(input("Enter the numerator for division: "))
+num2 = float(input("Enter the denominator for division: "))
+if num2 == 0:
+    print("Error: Cannot divide by zero!")
+else:
+    result = num1 / num2
+    print(f"The result of {num1} divided by {num2} is {result}")
+
+# Simple subtraction script
+num1 = float(input("Enter the number to subtract from: "))
+num2 = float(input("Enter the number to subtract: "))
+result = num1 - num2
+print(f"The result of {num1} minus {num2} is {result}")

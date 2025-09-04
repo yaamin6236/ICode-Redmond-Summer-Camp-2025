@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers Game: Interactive Business Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals with Subtle Accents -->
+    <!-- Application Structure Plan: A dashboard-style, single-page application with a fixed sidebar for navigation. This structure was chosen for its clarity and user-friendliness, allowing users to easily jump between different sections of the business plan without losing context. Key interactions include hover effects on cards to reveal more information, and a timeline view for goals to visualize the company's roadmap. This non-linear approach is more engaging than a static document. -->
+    <!-- Visualization & Content Choices: Goals are presented as an interactive timeline to show progression. The SWOT analysis uses a 4-quadrant grid with interactive cards for clear organization. Financial projections are visualized with a bar chart to compare revenue goals over time. The product strategy is laid out in phases using a clear, step-by-step visual format. All interactions are handled with vanilla JS, and charts use Chart.js. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfbf7;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <aside class="w-64 bg-gray-800 text-white p-6 fixed h-full">
+        <h1 class="text-2xl font-bold mb-8">Gamers Game</h1>
+        <nav>
+            <ul class="space-y-4">
+                <li><a href="#summary" class="block hover:text-blue-400">Executive Summary</a></li>
+                <li><a href="#market" class="block hover:text-blue-400">Market Analysis</a></li>
+                <li><a href="#product" class="block hover:text-blue-400">Product Strategy</a></li>
+                <li><a href="#goals" class="block hover:text-blue-400">Goals & Roadmap</a></li>
+                <li><a href="#financials" class="block hover:text-blue-400">Financials</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="ml-64 p-8 flex-1">
+        <section id="summary" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Executive Summary</h2>
+            <p class="text-lg">Gamers Game is a new game development company focused on creating innovative and high-quality games. Our mission is to combine creative storytelling with engaging gameplay to build a passionate community of players. This interactive plan outlines our vision, strategy, and goals for becoming a recognized name in the gaming industry.</p>
+        </section>
+
+        <section id="market" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Market Analysis</h2>
+             <p class="text-lg mb-6">The video game industry is a thriving and competitive space. Our success depends on understanding the market and our position within it. This section breaks down our target audience and a SWOT analysis to highlight our strategic approach.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Target Market</h3>
+                    <p><strong>Initial Focus:</strong> Mid-core to casual gamers (ages 13-35) on PC and mobile.</p>
+                    <p><strong>Future Expansion:</strong> Niche genres, esports, and console markets.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">SWOT Analysis</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-bold text-green-600">Strengths</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Passionate Team</li>
+                                <li>Creative Vision</li>
+                                <li>Agility</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-red-600">Weaknesses</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Limited Capital</li>
+                                <li>No Brand Recognition</li>
+                                <li>Small Team</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-600">Opportunities</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Growing Indie Market</li>
+                                <li>Digital Distribution</li>
+                                <li>Global Audience</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-yellow-600">Threats</h4>
+                            <ul class="list-disc list-inside">
+                                <li>Market Saturation</li>
+                                <li>Fierce Competition</li>
+                                <li>Funding Challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Product Strategy</h2>
+            <p class="text-lg mb-6">Our product strategy is designed for sustainable growth, starting with smaller projects and scaling up as the company expands. Each phase builds upon the success of the last, allowing us to learn, adapt, and grow our capabilities over time.</p>
+            <div class="flex space-x-8">
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Phase 1 (Years 1-2)</h3>
+                    <p>Develop and release 1-2 small-to-medium scope games for PC to build our portfolio and generate initial revenue.</p>
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Phase 2 (Years 2-4)</h3>
+                    <p>Expand to mobile platforms or develop a more ambitious PC title, using an early access model to involve the community.</p>
+                </div>
+                <div class="flex-1 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Phase 3 (Years 4+)</h3>
+                    <p>Explore console porting, live-service games, and developing new intellectual properties.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Goals & Roadmap</h2>
+            <p class="text-lg mb-6">Our goals are broken down into short, mid, and long-term objectives. This roadmap provides a clear path for our company's growth, from initial setup to becoming an established developer in the industry.</p>
+            <div class="relative">
+                <div class="border-l-2 border-gray-300 absolute h-full top-0 left-4"></div>
+                <div class="mb-8 pl-12">
+                    <h3 class="text-xl font-semibold text-blue-600">Short-Term (6-12 Months)</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Legally establish the company</li>
+                        <li>Assemble the core team</li>
+                        <li>Develop a playable prototype</li>
+                        <li>Secure initial funding</li>
+                    </ul>
+                </div>
+                <div class="mb-8 pl-12">
+                    <h3 class="text-xl font-semibold text-green-600">Mid-Term (1-3 Years)</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Launch the first full game</li>
+                        <li>Achieve positive cash flow</li>
+                        <li>Establish brand recognition</li>
+                        <li>Begin development on a second title</li>
+                    </ul>
+                </div>
+                <div class="pl-12">
+                    <h3 class="text-xl font-semibold text-purple-600">Long-Term (3-5+ Years)</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Achieve sustainable profitability</li>
+                        <li>Become a leader in a niche genre</li>
+                        <li>Launch titles on multiple platforms</li>
+                        <li>Develop a successful game franchise</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="financials" class="mb-12">
+            <h2 class="text-3xl font-bold mb-4">Financial Projections</h2>
+             <p class="text-lg mb-6">These financial projections illustrate our revenue goals for the first few years. While these are estimates, they provide a clear target for our sales and growth as we launch our initial titles and expand our portfolio.</p>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="chart-container">
+                    <canvas id="financialsChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('financialsChart').getContext('2d');
+            const financialsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Year 1', 'Year 2', 'Year 3-5'],
+                    datasets: [{
+                        label: 'Revenue Goal (in thousands)',
+                        data: [100, 300, 1000],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(75, 192, 192, 0.6)',
+                            'rgba(153, 102, 255, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y * 1000);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

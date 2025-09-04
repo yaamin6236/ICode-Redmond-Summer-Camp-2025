@@ -1,0 +1,6 @@
+print("What is your name?")
+print("Kaj")
+print("What is your age & favorite food")
+print("9 & sushi")
+user_input = input()
+print(user_input)
